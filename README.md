@@ -84,6 +84,16 @@ Base bundle: [Morphe Patches](https://github.com/MorpheApp/morphe-patches), [Mor
 ## Patches
 
 <!-- PATCHES_START EXPANDED -->
+> **[v1.0.0](https://github.com/MarcaDian/morphe-patches-yavot/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+<details open>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Voice Over Translation (Yandex)](#voice-over-translation-yandex) | Adds an option to enable Yandex voice-over translation of video audio tracks. Requires a Morphe Patches version with add-on support. |  |
+
+</details>
 
 <!-- PATCHES_END -->
 
