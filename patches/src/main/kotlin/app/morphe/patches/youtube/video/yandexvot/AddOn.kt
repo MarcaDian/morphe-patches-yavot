@@ -59,7 +59,16 @@ context(context: BytecodePatchContext)
 internal fun registerAddOn(registrationMethodDescriptor: String) {
     val addOnManagerClass = context.mutableClassDefByOrNull(ADD_ON_MANAGER_CLASS_DESCRIPTOR)
         ?: throw PatchException(
-            "Add-on support is missing. The installed Morphe Patches version is too old for this add-on."
+            """
+                ##########################
+                
+                Could not find Morphe Add-on support files.
+                
+                This patch bundle requires Morphe official patches.
+                Try again and include this patch bundle and recommended/preferred patches from Morphe official bundle.
+                 
+                ##########################
+            """
         )
 
     val registerMethod = addOnManagerClass.methods.firstOrNull {
