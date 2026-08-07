@@ -39,6 +39,7 @@ jobs:
         with:
           repository: MorpheApp/morphe-patches-library
           path: morphe-patches-library
+          ref: dev
 
       - name: Setup Java
         uses: actions/setup-java@v5.6.0
