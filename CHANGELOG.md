@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/MarcaDian/morphe-patches-yavot/compare/v1.0.1...v1.0.2) (2026-08-07)
+
+### 🐛 Bug Fixes
+
+* Use more verbose error message if morphe patches were not included ([f16862f](https://github.com/MarcaDian/morphe-patches-yavot/commit/f16862f9514cdd215968b6b5bba244f0c40f9f66))
+
 ## [1.0.1](https://github.com/MarcaDian/morphe-patches-yavot/compare/v1.0.0...v1.0.1) (2026-08-07)
 
 ### 🐛 Bug Fixes
