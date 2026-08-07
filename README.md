@@ -6,11 +6,18 @@ This bundle ships the `Voice Over Translation (Yandex)` patch for YouTube. It is
 
 ## Install
 
+### Morphe Manager
+
 1. Install/keep the base [morphe-patches](https://github.com/MorpheApp/morphe-patches) bundle in [Morphe Manager](https://github.com/MorpheApp/morphe-manager).
 2. Add this bundle as an additional source in Morphe Manager (`Patch sources → Add`).
 3. When patching YouTube, both patches are available:
    - `Voice Over Translation` (base, Google/OpenRouter/MyMemory backends)
    - `Voice Over Translation (Yandex)` (this bundle)
+   
+### Morphe Desktop
+Patch with two mpp bundles: Morphe official bundle (morphe.mpp) and this yavot addon bundle (yavot.mpp):
+
+`java -Xms1024m -jar morphe-desktop*-all.jar patch --patches morphe.mpp --patches yavot.mpp youtube_original.apk --out youtube_patched.apk`
 
 ## What is renamed vs upstream yavot
 
