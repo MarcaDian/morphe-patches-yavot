@@ -89,8 +89,11 @@ internal fun addAddOnPreferences(
     if (!declarationFile.exists()) {
         declarationFile.parentFile?.mkdirs()
         declarationFile.writeText(
-            "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                    "<morphe-add-on-preferences>\n</morphe-add-on-preferences>"
+            """
+                <?xml version="1.0" encoding="utf-8"?>
+                <morphe-add-on-preferences xmlns:android="http://schemas.android.com/apk/res/android">
+                </morphe-add-on-preferences>
+            """.trimIndent()
         )
     }
 
@@ -121,7 +124,11 @@ internal fun addBundledResources() {
             if (!destinationFile.exists()) {
                 destinationFile.parentFile?.mkdirs()
                 destinationFile.writeText(
-                    "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n</resources>"
+                    """
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <resources xmlns:android="http://schemas.android.com/apk/res/android">
+                        </resources>
+                    """.trimIndent()
                 )
             }
 
