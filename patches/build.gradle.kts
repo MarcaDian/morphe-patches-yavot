@@ -29,6 +29,10 @@ dependencies {
 }
 
 tasks {
+    named("sourcesJar") {
+        dependsOn(configurations.implementation)
+    }
+
     register<JavaExec>("generatePatchesList") {
         description = "Build patch with patch list"
 

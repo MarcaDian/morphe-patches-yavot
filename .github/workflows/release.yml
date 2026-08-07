@@ -38,6 +38,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: MorpheApp/morphe-patches-library
+          ref: dev
           path: morphe-patches-library
 
       - name: Setup Java
@@ -66,6 +67,13 @@ jobs:
           ./gradlew :extensions:youtube:compileReleaseKotlin \
                     :extensions:youtube:compileReleaseJavaWithJavac \
                     --no-daemon --stacktrace
+
+      - name: Precompile morphe-patches-library
+        working-directory: morphe-patches-library
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew :patch-library:jar --no-daemon
 
       - name: Release
         working-directory: morphe-patches-yavot
