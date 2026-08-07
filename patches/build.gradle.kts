@@ -30,7 +30,7 @@ dependencies {
 
 tasks {
     named("sourcesJar") {
-        dependsOn(configurations.implementation)
+        enabled = false
     }
 
     register<JavaExec>("generatePatchesList") {
