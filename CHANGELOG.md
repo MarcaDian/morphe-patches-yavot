@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/MarcaDian/morphe-patches-yavot/compare/v1.0.2...v1.0.3) (2026-08-09)
+
+### 🐛 Bug Fixes
+
+* Stop the built-in voice-over translation when Yandex VoT starts, and vice versa ([498a21d](https://github.com/MarcaDian/morphe-patches-yavot/commit/498a21ded5542ebad4820619de5bd8be16886a73))
+
 ## [1.0.2](https://github.com/MarcaDian/morphe-patches-yavot/compare/v1.0.1...v1.0.2) (2026-08-07)
 
 ### 🐛 Bug Fixes
