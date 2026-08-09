@@ -20,6 +20,7 @@
     <string name="morphe_yandex_vot_voice_style_live">Живой</string>
     <string name="morphe_yandex_vot_stopped">Перевод остановлен</string>
     <string name="morphe_yandex_vot_playback_error">Не удалось воспроизвести аудио перевода</string>
+    <string name="morphe_yandex_vot_unavailable_live">Перевод недоступен для прямых трансляций</string>
     <string name="morphe_yandex_vot_unavailable_too_long">Видео слишком длинное для перевода (макс. 4 часа)</string>
     <string name="morphe_yandex_vot_unavailable_same_language">Аудио видео уже на языке перевода</string>
     <string name="morphe_yandex_vot_stream_waiting">Ожидание… ~%s</string>
