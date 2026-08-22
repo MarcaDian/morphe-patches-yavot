@@ -601,7 +601,7 @@ public class YandexVoiceOverTranslationPatch {
             } else if (status == YandexVotApiClient.STATUS_SESSION_REQUIRED) {
                 if (useLiveVoices) {
                     String oauthToken = YandexVotSettings.YANDEX_VOT_OAUTH_TOKEN.get();
-                    if (oauthToken == null || oauthToken.isEmpty()) {
+                    if (oauthToken.isEmpty()) {
                         // No OAuth token configured for live voices — tell user to add one.
                         runOnUiIfCurrentGen(generation, () -> {
                             setWaitingTimeSeconds(-1);
@@ -717,7 +717,6 @@ public class YandexVoiceOverTranslationPatch {
                     refreshOriginalAudioVolume();
                     showTranslationErrorToast(str("morphe_yandex_vot_playback_error"));
                 });
-                return;
             } else if (status == YandexVotApiClient.STATUS_FAILED) {
                 if (useLiveVoices && YandexVotApiClient.isLivelyVoiceUnavailableError(result.message())) {
                     Logger.printDebug(() -> "VOT live voices unavailable (poll), retrying with standard voices");
@@ -732,11 +731,10 @@ public class YandexVoiceOverTranslationPatch {
                     refreshOriginalAudioVolume();
                     showTranslationErrorToast(str("morphe_yandex_vot_playback_error"));
                 });
-                return;
             } else if (status == YandexVotApiClient.STATUS_SESSION_REQUIRED) {
                 if (useLiveVoices) {
                     String oauthToken = YandexVotSettings.YANDEX_VOT_OAUTH_TOKEN.get();
-                    if (oauthToken == null || oauthToken.isEmpty()) {
+                    if (oauthToken.isEmpty()) {
                         runOnUiIfCurrentGen(generation, () -> {
                             translationStarting = false;
                             refreshOriginalAudioVolume();
@@ -756,7 +754,6 @@ public class YandexVoiceOverTranslationPatch {
                     refreshOriginalAudioVolume();
                     showTranslationErrorToast(str("morphe_yandex_vot_playback_error"));
                 });
-                return;
             } else if (status == YandexVotApiClient.STATUS_AUDIO_REQUESTED) {
                 sendAudioRequestedAudio(
                         videoId,
@@ -774,7 +771,6 @@ public class YandexVoiceOverTranslationPatch {
                 updateWaitingEstimate(generation, estimateSeconds);
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
                         nextPollDelaySeconds, useLiveVoices, generation, 0);
-                return;
             } else {
                 int estimateSeconds = YandexVotTiming.estimateOrDefault(
                         result.remainingTime(), PENDING_FALLBACK_WAIT_SECONDS);
@@ -782,7 +778,6 @@ public class YandexVoiceOverTranslationPatch {
                 updateWaitingEstimate(generation, estimateSeconds);
                 pollTranslation(videoId, videoTitle, url, duration, sourceLang, targetLang,
                         nextPollDelaySeconds, useLiveVoices, generation, 0);
-                return;
             }
         } catch (Exception e) {
             Logger.printException(() -> "pollTranslation failure", e);
