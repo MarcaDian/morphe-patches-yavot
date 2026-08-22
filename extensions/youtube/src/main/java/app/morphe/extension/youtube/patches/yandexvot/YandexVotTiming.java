@@ -21,7 +21,7 @@ public final class YandexVotTiming {
     /** @return How long to wait before the next readiness check. */
     static int pollDelaySeconds(int serverRemainingSeconds) {
         if (serverRemainingSeconds <= 0) return DEFAULT_POLL_DELAY_SECONDS;
-        return Math.max(1, Math.min(serverRemainingSeconds, MAX_POLL_DELAY_SECONDS));
+        return Math.min(serverRemainingSeconds, MAX_POLL_DELAY_SECONDS);
     }
 
     /** @return The server estimate, or {@code fallbackSeconds} if the server did not give one. */
