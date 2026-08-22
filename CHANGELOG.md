@@ -1,3 +1,9 @@
+## [1.0.5-dev.1](https://github.com/MarcaDian/morphe-patches-yavot/compare/v1.0.4...v1.0.5-dev.1) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* Crash when opening the bottom sheet after the theme colors moved out of the library ([4067cd3](https://github.com/MarcaDian/morphe-patches-yavot/commit/4067cd396a4eb9ea6bee7374fd4f3b42008d7a17))
+
 ## [1.0.4](https://github.com/MarcaDian/morphe-patches-yavot/compare/v1.0.3...v1.0.4) (2026-08-09)
 
 ### 🐛 Bug Fixes
