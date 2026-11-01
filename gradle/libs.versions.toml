@@ -5,7 +5,7 @@ morphe-patcher = "1.11.0"
 smali = "d92701d947"
 morphe-patches-library = "1.6.2"
 annotation = "1.10.0"
-gson = "2.14.0"
+gson = "2.15.0"
 junit = "4.13.2"
 protoc = "4.35.1"
 
